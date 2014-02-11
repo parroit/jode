@@ -1,0 +1,1 @@
+javac java\jode\Starter.java java\jode\EventLoop.java java\jode\Timers.java -d bin

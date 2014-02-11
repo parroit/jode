@@ -1,0 +1,1 @@
+java -cp bin jode.Starter %1
