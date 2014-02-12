@@ -28,7 +28,7 @@
             var filename, dir, dirname;
 
             if (_module._builtins && _module._builtins.indexOf(moduleName) > -1) {
-                dir = "C:/Documents and Settings/parroit/jode/javascript/builtins";
+                dir = "/home/parroit/src/jode/javascript/builtins";
                 filename = dir+"/" + moduleName + ".js";
                 
             } else if (moduleName.charAt(0) === ".") {
