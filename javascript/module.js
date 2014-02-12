@@ -28,7 +28,7 @@
             var filename, dir, dirname;
 
             if (_module._builtins && _module._builtins.indexOf(moduleName) > -1) {
-                dir = "/media/parroit/Elements/src/jode/javascript/builtins";
+                dir = "C:/Documents and Settings/parroit/jode/javascript/builtins";
                 filename = dir+"/" + moduleName + ".js";
                 
             } else if (moduleName.charAt(0) === ".") {
@@ -47,7 +47,7 @@
             }
 
             dirname = filename.substring(0,filename.lastIndexOf("/"));
-
+            
             
             var moduleSource = Module.INSTANCE.readFile(filename);
             
@@ -64,8 +64,13 @@
                     moduleSource+ "\n" +
                     "});\n" 
                     ;
-           //print(wrapped); 
-            eval(wrapped); // jshint ignore:line
+            
+            try {
+                eval(wrapped);     
+            } catch (err) {
+                print(err.stack);
+            }
+            
 
             return modules[moduleName];
         }

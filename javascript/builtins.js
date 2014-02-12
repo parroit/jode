@@ -1,1 +1,1 @@
-module.exports = ["util"];
+module.exports = ["util","assert"];

@@ -30,7 +30,8 @@ public enum EventLoop {
 					
 					if (
 						inLoop == 0 &&
-						Timers.INSTANCE.getScheduled() == 0 
+						Timers.INSTANCE.getScheduled() == 0 &&
+						Files.INSTANCE.getPendingCallbacks() == 0
 						
 						) {
 						service.shutdown();

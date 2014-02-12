@@ -541,7 +541,7 @@ function isSymbol(arg) {
 exports.isSymbol = isSymbol;
 
 function isUndefined(arg) {
-  return arg === void 0;
+  return arg === undefined;
 }
 exports.isUndefined = isUndefined;
 
@@ -580,6 +580,8 @@ function isPrimitive(arg) {
          typeof arg === 'undefined';
 }
 exports.isPrimitive = isPrimitive;
+
+function Buffer(){}
 
 function isBuffer(arg) {
   return arg instanceof Buffer;
