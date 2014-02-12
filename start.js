@@ -11,3 +11,5 @@ function A() {
 console.log("il fattoriale di 10 è %d", fact(10));
 
 console.log(new A);
+console.log(JSON.stringify(new A().content));
+console.log(Math.floor(1.2));
