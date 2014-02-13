@@ -12,8 +12,8 @@ if (process.env.TERM !== "xterm") {
     console.log(process.env.HOST)
     assert.equal(process.env.TERM, "xterm");
     assert.equal(process.execPath, "/home/parroit/programmi/jdk1.8.0/jre/bin/java.exe");
-    assert.equal(process.argv.join("-"), ["java.exe", "test/test-process.js"].join("-"));
-    assert.equal(process.cwdir(), "/media/parroit/Elements/src/jode");
+    assert.equal(process.argv.join("-"), ["java.exe", "test/simple/test-process.js"].join("-"));
+    assert.equal(process.cwd(), "/media/parroit/Elements/src/jode");
     assert.equal(process.arch, "x64");
     assert.equal(process.platform, "linux");
     

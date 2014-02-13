@@ -44,7 +44,7 @@ process.chdir = function(directory) {
 
 };
 
-process.cwdir = function() {
+process.cwd = function() {
 	return System.getProperty("user.dir");
 };
 
