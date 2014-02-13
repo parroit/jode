@@ -4,16 +4,48 @@
 		"selected_items":
 		[
 			[
-				"err",
-				"error"
+				"res",
+				"result"
 			],
 			[
-				"args",
-				"argsRE"
+				"resu",
+				"resultsSize"
 			],
 			[
-				"clea",
-				"clearTimeout"
+				"result",
+				"results"
+			],
+			[
+				"buf",
+				"bufferSize"
+			],
+			[
+				"String",
+				"StringBuilder"
+			],
+			[
+				"Com",
+				"CompletionHandler"
+			],
+			[
+				"print",
+				"printStackTrace"
+			],
+			[
+				"java",
+				"javaStream"
+			],
+			[
+				"dir",
+				"dirname"
+			],
+			[
+				"pr",
+				"print"
+			],
+			[
+				"readF",
+				"readFromFile"
 			],
 			[
 				"pu",
@@ -186,10 +218,6 @@
 			[
 				"setup",
 				"setupConfig"
-			],
-			[
-				"res",
-				"result"
 			],
 			[
 				"system",
@@ -486,34 +514,6 @@
 			[
 				"packa",
 				"packageName"
-			],
-			[
-				"pack",
-				"packageName"
-			],
-			[
-				"requi",
-				"requirePackage"
-			],
-			[
-				"paca",
-				"packageVersion"
-			],
-			[
-				"script",
-				"scriptContent"
-			],
-			[
-				"on",
-				"onPackageInstalled"
-			],
-			[
-				"root",
-				"rootPath"
-			],
-			[
-				"error",
-				"Error"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "java/jode/Files.java",
 			"settings":
 			{
-				"buffer_size": 1844,
+				"buffer_size": 3965,
 				"line_ending": "Windows"
 			}
 		},
@@ -531,15 +531,15 @@
 			"file": "test/test-fs.js",
 			"settings":
 			{
-				"buffer_size": 175,
+				"buffer_size": 757,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "java/jode/EventLoop.java",
+			"file": "javascript/builtins/fs.js",
 			"settings":
 			{
-				"buffer_size": 934,
+				"buffer_size": 788,
 				"line_ending": "Unix"
 			}
 		}
@@ -550,6 +550,10 @@
 		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"Pa",
+				"Package Control: Install Package"
+			],
 			[
 				"PCI",
 				"Package Control: Install Package"
@@ -595,10 +599,6 @@
 				"Package Control: Remove Package"
 			],
 			[
-				"Pa",
-				"Package Control: Install Package"
-			],
-			[
 				"PAck",
 				"Package Control: List Packages"
 			],
@@ -631,7 +631,7 @@
 				"Set Syntax: Markdown"
 			]
 		],
-		"width": 576.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -651,23 +651,31 @@
 	},
 	"file_history":
 	[
-		"/C/Documents and Settings/parroit/jode/java/jode/Callback.java",
-		"/C/Documents and Settings/parroit/jode/scripts/compile.cmd",
-		"/C/Documents and Settings/parroit/jode/test/files/test.txt",
-		"/C/Documents and Settings/parroit/jode/test/test-util.js",
-		"/C/Documents and Settings/parroit/jode/javascript/builtins.js",
-		"/C/Documents and Settings/parroit/jode/test/test-assert.js",
-		"/C/Documents and Settings/parroit/jode/javascript/builtins/assert.js",
-		"/C/Documents and Settings/parroit/jode/javascript/builtins/util.js",
-		"/C/Documents and Settings/parroit/jode/javascript/module.js",
-		"/C/Documents and Settings/parroit/jode/java/jode/Starter.java",
-		"/C/Documents and Settings/parroit/jode/javascript/console.js",
+		"/home/parroit/Scrivania/src/jode/scripts/compile",
+		"/home/parroit/Scrivania/src/jode/java/jode/Common.java",
+		"/home/parroit/Scrivania/src/jode/javascript/builtins.js",
+		"/home/parroit/Scrivania/src/jode/java/jode/Module.java",
+		"/home/parroit/Scrivania/src/jode/javascript/console.js",
+		"/home/parroit/Scrivania/src/jode/start.js",
+		"/home/parroit/Scrivania/src/jode/scripts/compile.cmd",
+		"/home/parroit/Scrivania/src/jode/scripts/jode",
+		"/home/parroit/Scrivania/src/jode/java/jode/Starter.java",
+		"/home/parroit/Scrivania/src/jode/javascript/module.js",
+		"/home/parroit/Scrivania/src/jode/javascript/builtins/util.js",
+		"/home/parroit/Scrivania/src/jode/javascript/globals.js",
+		"/home/parroit/Scrivania/src/jode/javascript/timers.js",
+		"/home/parroit/Scrivania/src/jode/test.js",
+		"/home/parroit/Scrivania/src/jode/a.js",
+		"/home/parroit/Scrivania/src/jode/java/jode/Timers.java",
+		"/home/parroit/Scrivania/src/jode/java/jode/EventLoop.java",
+		"/home/parroit/Scrivania/src/jode/scripts/jode.cmd",
+		"/home/parroit/src/bpm/sources/lib/bpm.js",
 		"/C/Documents and Settings/parroit/jode/test.js",
-		"/C/Documents and Settings/parroit/jode/javascript/timers.js",
-		"/C/Documents and Settings/parroit/jode/javascript/.jshintrc",
-		"/C/Documents and Settings/parroit/jode/java/jode/Timers.java",
-		"/C/Documents and Settings/parroit/jode/java/jode/EventLoop.java",
+		"/C/Documents and Settings/parroit/jode/java/jode/Starter.java",
 		"/C/Documents and Settings/parroit/jode/scripts/jode.cmd",
+		"/C/Documents and Settings/parroit/jode/scripts/compile.cmd",
+		"/C/Documents and Settings/parroit/jode/javascript/timers.js",
+		"/C/Documents and Settings/parroit/jode/java/jode/EventLoop.java",
 		"/C/Documents and Settings/parroit/jode/java/jode/EventPool.java",
 		"/C/Documents and Settings/parroit/jode/java/EventPool.java",
 		"/C/Documents and Settings/parroit/jode/java/Timers.java",
@@ -770,19 +778,11 @@
 		"/C/selex/rho-mobile/reference-app/public/index.html",
 		"/C/selex/rho-mobile/app-example/bower_components/translator/translator.js",
 		"/C/selex/rho-mobile/app-example/a.js",
-		"/C/selex/rho-mobile/reference-app/2",
-		"/C/selex/rho-mobile/reference-app/app/Upgrader/install_update_done.erb",
-		"/C/selex/rho-mobile/reference-app/app/Upgrader/done.erb",
-		"/C/selex/rho-mobile/reference-app/app/Upgrader/install_package.erb",
-		"/C/selex/rho-mobile/reference-app/app/Upgrader/error.erb",
-		"/C/selex/rho-mobile/reference-app/app/Upgrader/index.erb",
-		"/C/selex/rho-mobile/reference-app/app/layout.erb",
-		"/C/selex/rho-mobile/reference-app/app/Upgrader/download_status.erb",
-		"/C/selex/rho-mobile/reference-app/app/index.erb"
+		"/C/selex/rho-mobile/reference-app/2"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -843,33 +843,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"equal",
-			"'",
-			"context",
-			"common",
-			"NaN",
-			"isFinite",
-			"isNaN",
-			"isUnd",
-			"getMe",
-			"fail",
-			"JSON",
-			"replacer",
-			"truncate",
-			"expectedException",
-			"AssertionError",
-			"fail",
-			"pSlice",
-			"DENTRO",
-			"_throws",
-			"doesNotThrow",
-			"_throws",
-			"AssertionE",
-			"Buffer",
-			"common",
 			"\\",
-			"'",
-			"global",
+			"var",
+			"print",
+			"\\",
 			"users",
 			"'",
 			"(placeHolder).find(\".",
@@ -970,7 +947,30 @@
 			"impiantiPlaceHolder",
 			"machinery-list",
 			"choose-btn",
-			"impiantiPlaceHolder"
+			"impiantiPlaceHolder",
+			"readAlarmList",
+			"err",
+			"Err",
+			"err",
+			"Err",
+			"err",
+			"hide",
+			"hidd",
+			"pollIntervalSeconds: 30",
+			"pollIntervalSeconds: 10",
+			"pollIntervalSeconds",
+			"Fowler",
+			"throws",
+			"callAlarmList",
+			"readAlarmList",
+			"callAlarmList",
+			"pageSize",
+			"fromTimer",
+			"timeFilters",
+			"readAlarmList",
+			"page",
+			"dayPrev_onclick",
+			"td"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1068,7 +1068,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1077,15 +1077,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1844,
+						"buffer_size": 3965,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1026,
-								1026
+								927,
+								927
 							]
 						],
 						"settings":
@@ -1095,10 +1095,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 637.0,
+						"translation.y": 561.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1107,15 +1107,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 175,
+						"buffer_size": 757,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								134,
-								134
+								735,
+								735
 							]
 						],
 						"settings":
@@ -1126,30 +1126,29 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "java/jode/EventLoop.java",
+					"file": "javascript/builtins/fs.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 934,
+						"buffer_size": 788,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								144,
-								98
+								81,
+								81
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Java/Java.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1163,7 +1162,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 32.0
+		"height": 40.0
 	},
 	"input":
 	{
@@ -1203,7 +1202,7 @@
 	"project": "jode.sublime-project",
 	"replace":
 	{
-		"height": 74.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1241,7 +1240,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 215.0,
+	"side_bar_width": 201.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

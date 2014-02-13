@@ -28,44 +28,61 @@ public enum Files {
     public class ReadCompletionHandler implements CompletionHandler<Integer, ByteBuffer> {
         private final Callback cb;
         private final int bufferSize;
-        private final int resultsSize;
-        private final List<byte[]> results;
+        private int chunksSize;
+        private final List<byte[]> chunks;
         private final AsynchronousFileChannel channel ;
-
-        public ReadCompletionHandler (Callback cb, int bufferSize, List<byte[]> results, int resultsSize, AsynchronousFileChannel channel  ) {
+        private final ByteBuffer buffer;
+        
+        public ReadCompletionHandler (Callback cb, int bufferSize, AsynchronousFileChannel channel  ) {
             this.cb = cb;
-            this.results = results;
-            this.resultsSize = resultsSize;
             this.bufferSize = bufferSize;
             this.channel = channel;
+
+            chunksSize = 0;
+            
+            buffer = ByteBuffer.allocate(bufferSize);
+
+            chunks = new ArrayList<byte[]>();
         }
 
-        public void completed(Integer result, ByteBuffer attachment) {
-
-            if (result > 0) {
-
-                byte[] chunk = new byte[result];
-                attachment.rewind();
-                attachment.get(chunk);
+        public void read(){
+            buffer.rewind();
                 
-                results.add(chunk);
+            channel.read(buffer, chunksSize , buffer, this );
+        }
 
-                ByteBuffer buffer = ByteBuffer.allocate(bufferSize);
-                ReadCompletionHandler completion = new ReadCompletionHandler(cb, bufferSize, results, resultsSize + result, channel);
-                channel.read(buffer, resultsSize + result, buffer, completion );
+        private byte[] concatChunks(){
+            byte[] result = new byte[chunksSize];
+            int resultPosition = 0;
+
+            for (byte[] arr : chunks) {
+            
+                System.arraycopy(arr, 0, result, resultPosition, arr.length);
+                resultPosition += arr.length;
+            }
+
+            return result;
+        }
+
+        public void completed(Integer bytesRead, ByteBuffer buffer) {
+
+            if (bytesRead > 0) {
+
+                byte[] chunk = new byte[bytesRead];
+                buffer.rewind();
+                buffer.get(chunk);
+                chunks.add(chunk);
+
+                
+                this.chunksSize += bytesRead;
+                
+                this.read();
 
             } else {
                 
-                byte[] wholeArray = new byte[resultsSize];
-                int wholePosition = 0;
-
-                for (byte[] arr : results) {
-                    System.arraycopy(arr, 0, wholeArray, wholePosition, arr.length);
-                    wholePosition += arr.length;
-                }
-
-               // System.out.println(wholeArray.length);
-               //System.out.println(resultsSize);
+                
+                byte[] wholeArray = concatChunks();
+               
 
                 String res = new String( wholeArray, StandardCharsets.UTF_8 );
                 pendingCallbacks.decrementAndGet();
@@ -86,7 +103,7 @@ public enum Files {
 
         }
 
-        public void failed(Throwable exception, ByteBuffer attachment) {
+        public void failed(Throwable exception, ByteBuffer buffer) {
             pendingCallbacks.decrementAndGet();
             EventLoop.INSTANCE.run(new Runnable () {
                 public void run() {
@@ -106,12 +123,12 @@ public enum Files {
 
             AsynchronousFileChannel channel = AsynchronousFileChannel.open(file);
 
-            ByteBuffer buffer = ByteBuffer.allocate(bufferSize);
-
-            List<byte[]> results = new ArrayList<byte[]>();
-            ReadCompletionHandler completion = new ReadCompletionHandler(cb, bufferSize, results, 0, channel);
-
-            channel.read(buffer, 0, buffer, completion );
+            ReadCompletionHandler completion = 
+                new ReadCompletionHandler(cb, bufferSize, channel);
+            
+            completion.read();
+            
+           
 
         } catch (IOException ex) {
 

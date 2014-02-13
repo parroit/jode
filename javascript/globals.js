@@ -11,4 +11,7 @@ exports.init = function(global) {
     global.clearInterval = timers.clearInterval;
     global.clearTimeout = timers.clearTimeout;
 
+    var process = require("./process");
+
+    global.process = process;
 };

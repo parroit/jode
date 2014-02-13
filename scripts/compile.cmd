@@ -1,1 +1,1 @@
-javac java\jode\Callback.java java\jode\Files.java java\jode\Module.java java\jode\Starter.java java\jode\EventLoop.java java\jode\Timers.java -d bin
+javac java/jode/PlaformLinux.java java/jode/PlaformCommon.java java/jode/Callback.java java/jode/Files.java java/jode/Module.java java/jode/Starter.java java/jode/EventLoop.java java/jode/Timers.java -d bin -cp java/jna-4.0.0.jar:java/jna-platform-4.0.0.jar

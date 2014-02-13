@@ -17,6 +17,7 @@ public class Starter {
         EventLoop.INSTANCE.run(new Runnable () {
             public void run () {
                 try {
+                    PlatformCommon.INSTANCE.args = args;
                     String dirname = new File(System.getProperty("user.dir")).getAbsolutePath();
                     String filename =  new File(dirname, args[0]).getAbsolutePath();
                     dirname = dirname.replace("\\","/");

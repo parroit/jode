@@ -16,7 +16,8 @@
   
   "globals": {
     "define": true,
-    "requirejs": true
+    "requirejs": true,
+    "Java": true
 
   },
   

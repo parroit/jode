@@ -1,1 +1,1 @@
-java -cp bin jode.Starter %1
+java -cp bin;java/jna-4.0.0.jar;java/jna-platform-4.0.0.jar jode.Starter %1
