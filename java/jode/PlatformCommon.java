@@ -8,6 +8,7 @@ import jdk.nashorn.internal.objects.*;
 public enum PlatformCommon {
     INSTANCE;
     public String[] args;
+    public CallbackInvoker invoker;
 
     public Object wrapException(Throwable ex){
         return NativeError.constructor(true,null,ex.getClass().getSimpleName()+": "+ex.getMessage());

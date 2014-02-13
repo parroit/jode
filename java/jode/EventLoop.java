@@ -20,13 +20,15 @@ public enum EventLoop {
 		service.execute(new Runnable () {
 			public void run (){
 				try {
-					function.run();	
+					PlatformCommon.INSTANCE.invoker.invoke(function);	
+
+				} catch(Throwable t){
+					System.err.println(t.getMessage());
+
 				} finally {
-					//System.out.println(Timers.INSTANCE.getScheduled());
 					
 					long inLoop = eventsInLoop.decrementAndGet();
 					
-					//System.out.println(inLoop);
 					
 					if (
 						inLoop == 0 &&

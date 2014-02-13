@@ -1,5 +1,5 @@
 exports.init = function(global) {
-
+    
     global._module._builtins = require("./builtins");
 
     global.console = require("./console");

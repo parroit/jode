@@ -29,13 +29,13 @@
 
             if (_module._builtins && _module._builtins.indexOf(moduleName) > -1) {
                 dir = "/home/parroit/src/jode/javascript/builtins";
-                filename = dir+"/" + moduleName + ".js";
+                filename = dir+"/" + moduleName;
                 
             } else if (moduleName.charAt(0) === ".") {
-                filename = __dirname + "/" + moduleName.substring(2) + ".js";
+                filename = __dirname + "/" + moduleName.substring(2) ;
                 dir = __dirname;
             } else if (moduleName.charAt(0) === "/") {
-                filename = moduleName + ".js";
+                filename = moduleName;
                 dir = __dirname;
             } else {
                 print(moduleName);
@@ -45,12 +45,17 @@
 
                 
                    
-                filename = modulesDir + moduleName + "/" + pkg.main + ".js";
+                filename = modulesDir + moduleName + "/" + pkg.main ;
                 dir = moduleName;
             }
 
             dirname = filename.substring(0,filename.lastIndexOf("/"));
             
+            var extension = filename.substring(filename.length-3).toLowerCase();
+            
+            if (extension !== ".js") {
+                filename = filename + ".js";
+            }
             
             var moduleSource = Module.INSTANCE.readFile(filename);
             
