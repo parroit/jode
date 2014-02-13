@@ -18,8 +18,10 @@ public class Starter {
             public void run () {
                 try {
                     PlatformCommon.INSTANCE.args = args;
-                    String dirname = new File(System.getProperty("user.dir")).getAbsolutePath();
-                    String filename =  new File(dirname, args[0]).getAbsolutePath();
+                    String dirname = new File(args[0]).getParentFile().getAbsolutePath();
+                    String filename =  new File(args[0]).getAbsolutePath();
+                    String jodeHome =  "/home/parroit/src/jode/";
+                    
                     dirname = dirname.replace("\\","/");
                     filename = filename.replace("\\","/");
                     String source =  "var __dirname = '" + dirname + "';\n" +
@@ -29,7 +31,7 @@ public class Starter {
                                      "    return _module._require(moduleName, __dirname);\n" +
                                      "}\n\n" +
                                      "(function (global,exports) {\n" +
-                                    "   var globals = require('./javascript/globals');\n"+
+                                    "   var globals = require('"+jodeHome +"javascript/globals');\n"+
                                     "   globals.init(global);\n"+
                                      Module.INSTANCE.readFile(filename) +
                                      "\n})(this,{});";

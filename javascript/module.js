@@ -34,6 +34,9 @@
             } else if (moduleName.charAt(0) === ".") {
                 filename = __dirname + "/" + moduleName.substring(2) + ".js";
                 dir = __dirname;
+            } else if (moduleName.charAt(0) === "/") {
+                filename = moduleName + ".js";
+                dir = __dirname;
             } else {
                 print(moduleName);
                 var modulesDir =  __dirname ? __dirname + "/node_modules/" : "",
